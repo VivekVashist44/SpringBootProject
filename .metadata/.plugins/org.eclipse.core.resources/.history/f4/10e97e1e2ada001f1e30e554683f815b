@@ -1,0 +1,11 @@
+package com.portfolio.journalApp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.portfolio.journalApp.repository.JournalEntryRepository;
+
+public class JournalEntryService {
+	
+	@Autowired
+	private JournalEntryRepository journalEntryRepository; 
+}

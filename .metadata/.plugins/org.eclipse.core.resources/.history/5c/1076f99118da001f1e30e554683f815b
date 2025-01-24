@@ -1,0 +1,51 @@
+package com.portfolio.journalApp.controller;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+ 
+import com.portfolio.journalApp.entity.JournalEntry;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+@RequestMapping("/_journal")
+public class JournalEntryControllerV2 {
+	private Map<Long, JournalEntry> journalEntries= new HashMap<>();
+	
+	@GetMapping
+	public List<JournalEntry> getAll(){
+		return new ArrayList<>(journalEntries.values());
+	}
+	
+	@GetMapping("id/{myId}")
+	public JournalEntry getJournalEntryById(@PathVariable long myId){
+		return journalEntries.get(myId);
+	}
+	
+	@PostMapping
+	public boolean createEntry(@RequestBody JournalEntry myEntry) {
+		journalEntries.put(myEntry.getId(), myEntry);
+		return true;
+	}
+	@DeleteMapping("delete/{myId}")
+	public boolean deleteEntrybyId(@PathVariable long myId){
+		journalEntries.remove(myId);
+		return true;
+	}
+	
+	@PutMapping("id/{id}")
+	public JournalEntry updatejournalEntry(@PathVariable Long id,@RequestBody JournalEntry myEntry) {
+		return journalEntries.put(id, myEntry);
+	}
+	
+}

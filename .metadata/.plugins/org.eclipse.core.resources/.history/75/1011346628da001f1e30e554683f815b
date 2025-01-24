@@ -1,0 +1,5 @@
+package com.portfolio.journalApp.service;
+
+public class JournalEntryService {
+
+}
