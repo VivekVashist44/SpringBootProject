@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Amenities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/UserInput.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/images/logo.png" alt="LocateEase Logo">
+      <span>LocateEase</span>
+    </div>
+    <nav>
+      <a href="CoverPage.html">Home</a>
+      <a href="apiPage.html">API</a>
+      <a href="#contact">Contact Us</a>
+      <a href="SignUpLogin.html">Sign Up / Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Find Amenities</h1>
+      <p>Search for amenities in your area using either PIN code or region for better accessibility.</p>
+    </section>
+
+    <section class="search-container">
+      <div class="tabs">
+        <button class="tab-button active" data-tab="pin">Search by PIN</button>
+        <button class="tab-button" data-tab="region">Search by Region</button>
+      </div>
+
+      <div class="tab-content active" id="pin">
+        <form id="pinForm">
+          <label for="pinInput">Enter PIN Code:</label>
+          <input type="text" id="pinInput" placeholder="Enter PIN Code">
+          <button type="submit" class="cta-button">Search</button>
+        </form>
+      </div>
+
+      <div class="tab-content" id="region">
+        <form id="regionForm">
+          <label for="regionInput">Enter Region Name:</label>
+          <input type="text" id="regionInput" placeholder="Enter Region">
+          <button type="submit" class="cta-button">Search</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2024 LocateEase. All rights reserved.</p>
+    <p>Email: <a href="mailto:vivek.00419011922@ipu.ac.in" aria-label="Email LocateEase support">vivek.00419011922@ipu.ac.in</a></p>
+    <p>Email: <a href="mailto:sagar.10819011921@ipu.ac.in" aria-label="Email LocateEase support">sagar.10819011921@ipu.ac.in</a></p>
+  </footer>
+
+  <script src="/js/UserInput.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure full height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #e0f7fa;  /* Solid color */
+    background-image: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Gradient can still be kept, but we can modify the behavior */
+    background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+    display: flex;
+    flex-direction: column; /* Stack header, main content, footer */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2%;
+  background-color: #0066cc;
+  color: #fff;
+  border-radius: 10px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 15px; /* Added padding for better click area */
+    border-radius: 5px;  /* Rounded corners for better look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color */
+}
+
+header nav a:hover, header nav a.active {
+    background-color:  #ffffff;  /* Yellow hover background */
+    color: #333;  /* Dark text color on hover */
+    border-bottom: 2px solid #ffcc00; /* Optional underline effect */
+}
+main {
+  padding: 40px 0;
+  text-align: center;
+  flex: 1; /* Allow main to take up remaining space */
+}
+
+.intro h1 {
+  font-size: 2rem;
+  color: #003366; /* Darker text color for better readability */
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #555; /* Muted dark gray */
+}
+
+.amenities-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #004AAD; /* Matching the header color */
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555; /* Muted gray for card text */
+}
+
+.card .btn {
+  background-color: #28a745; /* Updated button color to match the cover page */
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px; /* Rounded corners for the button */
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #003366; /* Darker shade for button hover */
+}
+
+/* Footer style */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Footer links */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Custom container padding */
+.container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

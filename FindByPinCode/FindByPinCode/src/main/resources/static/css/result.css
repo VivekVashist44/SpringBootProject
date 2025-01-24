@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #e0f7fa;  /* Solid color */
+    background-image: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Gradient can still be kept, but we can modify the behavior */
+    background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+    display: flex;
+    flex-direction: column; /* Stack header, main content, footer */
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2%;
+    background-color: #0066cc;
+    color: #fff;
+    border-radius: 10px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 15px; /* Added padding for better click area */
+    border-radius: 5px;  /* Rounded corners for better look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color */
+}
+
+header nav a:hover, header nav a.active {
+    background-color:  #ffffff;  /* Yellow hover background */
+    color: #333;  /* Dark text color on hover */
+    border-bottom: 2px solid #ffcc00; /* Optional underline effect */
+}
+main {
+    padding: 40px 0;
+    text-align: center;
+    flex: 1; /* Allow main to take up remaining space */
+}
+
+/* Button Styles */
+button.active {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+button.active:hover {
+    background-color: #004085;
+}
+
+/* Table Styles */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Custom container padding */
+.container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Ensure the table is responsive */
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#results-container {
+    margin-top: 20px;
+}
+
