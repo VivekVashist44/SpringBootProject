@@ -1,0 +1,5 @@
+package com.portfolio.journalApp.entity;
+
+public class User {
+
+}
